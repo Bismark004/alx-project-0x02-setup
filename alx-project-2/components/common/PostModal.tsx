@@ -27,7 +27,7 @@ const PostModal: React.FC<PostModalProps> = ({ isOpen, onClose, onSubmit }) => {
                         type="text" 
                         className="w-full border border-gray-700 font-medium rounded-md p-2"
                         value={title}
-                        onChange={(e) => setTotle(e.target.value) }
+                        onChange={(e) => setTitle(e.target.value) }
                         required
                          />
                     </div>
