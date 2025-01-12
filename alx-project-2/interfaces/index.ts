@@ -1,6 +1,6 @@
 export interface CardProps {
     title: string;
-    content: string;
+    body: string;
 }
 
 export interface PostModalProps {
@@ -19,8 +19,21 @@ export interface ButtonProps {
 
 
 export interface PostProps {
+    id: number;
     title: string;
-    content: string;
+    body: string;
     userId: number;
   }
+
+  export interface UserProps {
+    name: string;
+    email: string;
+    address: {
+      street: string;
+      city: string;
+      zipcode: string;
+    };
+  }
+  
+  
   

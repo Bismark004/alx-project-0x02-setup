@@ -1,16 +1,11 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import PostCard from "../components/common/PostCard";
+import PostCard from "@/components/common/PostCard";
+import {PostProps} from "@/interfaces/index";
 
-interface Post {
-  id: number;
-  title: string;
-  body: string;
-  userId: number;
-}
 
 const Posts: React.FC = () => {
-  const [posts, setPosts] = useState<Post[]>([]);
+  const [posts, setPosts] = useState<PostProps[]>([]);
 
   useEffect(() => {
     const fetchPosts = async () => {
@@ -34,8 +29,9 @@ const Posts: React.FC = () => {
         {posts.map((post) => (
           <PostCard
             key={post.id}
+            id={post.id}
             title={post.title}
-            content={post.body}
+            body={post.body}
             userId={post.userId}
           />
         ))}
