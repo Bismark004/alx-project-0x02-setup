@@ -1,25 +1,31 @@
-import Link from 'next/link';
+import React from "react";
+import Link from "next/link";
 
-export default function Header() {
-    return (
-        <header className="bg-gray-800 text-white"> 
-            <div className="container mx-auto flex justify-between items-center py-4 px-6">
-                <h1 className="text-2xl font-bold">Marc</h1>
-
-                <nav>
-                    <ul className="list-none flex gap-4">
-                        <li>
-                            <Link href="/" className="hover:text-gray-300 duration-300">Home</Link>
-                        </li>
-                        <li>
-                            <Link href="/about" className="hover:text-gray-300 transition-colors duration-300">About</Link>
-                        </li>
-                    </ul>
-
-                </nav>
-            </div>
-
-        </header>
-    )
-        
+const Header: React.FC = () => {
+  return (
+    <header className="bg-gray-800 text-white p-4">
+      <nav className="container mx-auto flex justify-between">
+        <div className="text-lg font-bold">My App</div>
+        <ul className="flex space-x-4">
+          <li>
+            <Link href="/home">
+              <a className="hover:underline">Home</a>
+            </Link>
+          </li>
+          <li>
+            <Link href="/about">
+              <a className="hover:underline">About</a>
+            </Link>
+          </li>
+          <li>
+            <Link href="/posts">
+              <a className="hover:underline">Posts</a>
+            </Link>
+          </li>
+        </ul>
+      </nav>
+    </header>
+  );
 };
+
+export default Header;
