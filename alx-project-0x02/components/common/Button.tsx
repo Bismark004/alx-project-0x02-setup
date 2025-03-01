@@ -1,5 +1,6 @@
 import React from "react";
 import {ButtonProps} from '@/interfaces/index';
+import {type ButtonProps}
 const Button: React.FC<ButtonProps> = ({ size, shape, onClick, children }) => {
   const sizeClasses = {
     small: "px-2 py-1 text-sm",
